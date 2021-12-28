@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(45deg, #e16262, transparent);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+    font-family: cursive;
+    text-align: center;
+    margin: 13px 0px 0px 0px;
+}
+
+
+/* HISTORY COMPONENET */
+
+.CalcHistoryContainer {
+    border: solid;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: 72vh;
+    width: 16vw;
+    background-image: linear-gradient(91deg, black, #545454);
+    overflow-y: auto;
+}
+
+.CalcHistoryContainer>p {
+    color: rgb(255, 255, 255);
+    font-size: 1.6em;
+    margin: 0.4rem 0rem 0rem 0rem;
+}
+
+.historyItem {
+    border: solid;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem 1rem;
+    flex: 1 1 auto;
+    background-color: rgb(66 33 181);
+}
+
+.historyItem:last-child {
+    background-color: rgb(0 56 215);
+}
+
+.historyItem:Hover {
+    background-color: rgb(18 88 0);
+}
+
+.historyItem .row1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.historyItem .row2 {
+    align-self: flex-end;
+}
+
+.historyItem p {
+    font-size: 1.7em;
+    margin: 0;
+}
+
+.historyItem .operation {
+    color: rgb(255, 255, 255)
+}
+
+.historyItem .op-id {
+    color: rgb(255, 1, 1);
+}
+
+.historyItem .answer {
+    color: rgb(0 157 6);
+}
+
+.AppContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 94vh;
+    width: 100vw;
+    border-radius: 1px;
+}
+
+.App {
+    border: solid;
+    border-radius: 9px;
+    height: 76vh;
+    width: 30vw;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: rgb(0 0 0);
+}
+
+.ScreenContainer {
+    /* border: solid red; */
+    flex: 1 1;
+    margin: 0.3rem 0.3rem .5rem 0.3rem;
+    background-color: rgb(98 98 98);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.screenText {
+    color: rgb(255 255 255);
+    font-size: 4.6rem;
+    text-align: end;
+    overflow: hidden;
+    padding: 6px;
+}
+
+.ButtonBoxContainer {
+    /* border: solid blue; */
+    height: 100%;
+    /* margin: 0rem -0.3rem 0.3rem 0.3rem; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr [col-start]);
+    grid-template-rows: repeat(5, 1fr [col-start]);
+    grid-column-gap: 10px;
+    grid-column-gap: 10px;
+    column-gap: 10px;
+    grid-row-gap: 10px;
+    row-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+    padding: 1rem;
+    flex: 4 1;
+    text-align: center;
+}
+
+.ButtonContainer {
+    box-sizing: border-box;
+    background-color: rgb(66 33 181);
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    border-radius: 15px;
+}
+
+.ButtonContainer:hover {
+    background-color: rgb(38, 19, 104);
+}
+
+.ButtonContainer.equals {
+    background-color: rgb(255, 1, 1);
+    grid-column: 3 / span 2;
+    font-size: 4em;
+}
